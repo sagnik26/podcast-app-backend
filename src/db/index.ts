@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
+import 'dotenv/config';
+import { MONGO_URI } from "#/utils/variable";
 
-const URI = process.env.MONGO_URI as string
-
-mongoose.connect(URI)
+mongoose.connect(MONGO_URI)
 .then(() => {
     console.log("Db is connected")
 })
